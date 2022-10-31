@@ -5,10 +5,7 @@ module.exports =  {
   },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "prettier",
-    'plugin:@typescript-eslint/recommended',
-    "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -16,11 +13,9 @@ module.exports =  {
   plugins: ["react","@typescript-eslint", "import", "unused-imports", "import-access"],
   rules: {
       "react/react-in-jsx-scope": "off",
-      "@typescript-eslint/explicit-function-return-type": ["error"],
-      "@typescript-eslint/no-unused-vars": [
-          "error",
-          { argsIgnorePattern: "^_+$" },
-      ],
+      "@typescript-eslint/explicit-function-return-type": ["warn"],
+      "@typescript-eslint/require-await": ["warn"],
+      "@typescript-eslint/no-unused-vars": ["off",],
       "import/order": [
           "error",
           {

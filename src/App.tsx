@@ -1,6 +1,7 @@
-import "./index.css";
+import './index.css';
+import Search from './pages/Search';
 const App = (): JSX.Element => {
-  return <div className="text-3xl font-bold underline">hello world</div>;
+  return <Search />;
 };
 
 export default App;
