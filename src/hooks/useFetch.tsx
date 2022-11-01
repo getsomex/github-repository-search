@@ -19,7 +19,7 @@ const constructUrl = (url: string, params?: QueryParams): URL => {
   return urlInstance;
 };
 /**
- * Fetch Hoo
+ * Fetch Hook
  * @param {string} url
  * @returns UseFetch<T>
  */

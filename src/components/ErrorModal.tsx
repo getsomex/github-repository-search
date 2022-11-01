@@ -4,6 +4,11 @@ type Props = {
   message: string;
   isShow: boolean;
 };
+
+/**
+ * Error Modal
+ * @returns JSX.Element
+ */
 export const ErrorModal = ({ message, isShow }: Props): JSX.Element => {
   const [isModalShow, setIsModalShow] = useState(false);
   useEffect(() => {

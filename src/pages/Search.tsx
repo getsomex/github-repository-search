@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { GoMarkGithub } from 'react-icons/go';
 import {
@@ -41,7 +40,7 @@ const Search = (): JSX.Element => {
   useEffect(() => {
     const fetchRepo = async (): Promise<void> => {
       await fetchData({
-        // q: throttledValue ? `${throttledValue}` : `${defaultSearchValue}`,
+        q: throttledValue ? `${throttledValue}` : `${defaultSearchValue}`,
         page: current,
         per_page: GITHUB_API.LIMIT,
       }).catch((err) => {
