@@ -114,3 +114,9 @@ export type Repository = {
   items: Items[];
   total_count: number;
 };
+
+export type RepositoryError = {
+  documentation_url: string;
+  errors: { resource: string; field: string; code: string }[];
+  message: string;
+};
