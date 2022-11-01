@@ -1,6 +1,5 @@
 import { useRef } from 'react';
-import { ReactComponent as ClearIcon } from '../assets/icons/clear.svg';
-import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
+import { HiX, HiSearch } from 'react-icons/hi';
 
 type Props = {
   placeHolder?: string;
@@ -25,7 +24,7 @@ export const SearchField = ({
   return (
     <div className="relative w-full">
       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-        <SearchIcon />
+        <HiSearch />
       </div>
       <input
         type="text"
@@ -43,7 +42,7 @@ export const SearchField = ({
         className="absolute inset-y-0 right-0 flex items-center pr-3"
         onClick={handleOnClickClear}
       >
-        <ClearIcon />
+        <HiX />
       </button>
     </div>
   );
