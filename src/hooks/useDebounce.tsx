@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 
 /**
  * debounce hook
- * @param searcValue search value
- * @param timeOut throttling value
+ * @param {string} searcValue search value
+ * @param {number} timeOut throttling value
  * @returns
  */
 export const useDebounce = (searcValue: string, timeOut: number): string => {

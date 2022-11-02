@@ -41,6 +41,14 @@ module.exports =  {
             argsIgnorePattern: "^_",
           },
       ],
+      
+        "@typescript-eslint/no-misused-promises": [
+          "error",
+          {
+            "checksVoidReturn": false
+          }
+        ]
+      
   },
   ignorePatterns: ['.eslintrc.js','tailwind.config.js']
 

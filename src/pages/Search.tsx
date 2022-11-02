@@ -40,11 +40,11 @@ const Search = (): JSX.Element => {
   useEffect(() => {
     const fetchRepo = async (): Promise<void> => {
       await fetchData({
-        q: throttledValue ? `${throttledValue}` : `${defaultSearchValue}`,
+        q: throttledValue.trim()
+          ? `${throttledValue}`
+          : `${defaultSearchValue}`,
         page: current,
         per_page: GITHUB_API.LIMIT,
-      }).catch((err) => {
-        console.log(err);
       });
     };
     void fetchRepo();
@@ -55,10 +55,6 @@ const Search = (): JSX.Element => {
    * @returns void
    */
   const handleOnChangeSearchTerm = (searchTerm: string): void => {
-    console.log(searchTerm);
-    if (!searchTerm.trim()) {
-      return undefined;
-    }
     setSearchTerm(searchTerm);
   };
   /**
@@ -69,7 +65,6 @@ const Search = (): JSX.Element => {
     setSearchTerm('');
   };
 
-  console.log(error);
   return (
     <div className="h-screen flex-col justify-center bg-gray-50 py-6 sm:py-12">
       <h1 className="mb-4 flex justify-center	 text-center text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl">
