@@ -40,9 +40,9 @@ const Search = (): JSX.Element => {
   useEffect(() => {
     const fetchRepo = async (): Promise<void> => {
       await fetchData({
-        q: throttledValue.trim()
-          ? `${throttledValue}`
-          : `${defaultSearchValue}`,
+        q: throttledValue
+          ? `${throttledValue}in:name`
+          : `${defaultSearchValue}in:name`,
         page: current,
         per_page: GITHUB_API.LIMIT,
       });
